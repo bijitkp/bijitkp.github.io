@@ -3,184 +3,134 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
 <title>Bijit Kumar Paul | Technical Lead, moving into Agentic AI</title>
-<meta name="description" content="Technical lead with 15+ years in C, C++, Python and Linux across IoT, telecommunications and unified communication. Now building agentic AI applications.">
+<meta name="description" content="Technical Lead with 15+ years in C, C++, Python and Linux across IoT, telecommunications and unified communication. Now building agentic AI applications.">
 <meta property="og:title" content="Bijit Kumar Paul | Technical Lead">
 <meta property="og:description" content="15+ years of backend, IoT and telecom engineering. Now building agentic AI applications.">
-<meta name="theme-color" content="#F6F7F9">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0D1117">
 <style>
   :root {
-    --bg: #F6F7F9;
+    --bg: #0D1117;
+    --surface: #161B22;
+    --text: #E6EDF3;
+    --muted: #8B949E;
+    --line: #30363D;
+    --accent: #8FDCA8;
+    --accent-ink: #0B2A17;
+    --accent-text: #8FDCA8;
+    --accent-soft: #12261A;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  }
+  :root[data-theme="light"] {
+    --bg: #F6F8FA;
     --surface: #FFFFFF;
-    --text: #111827;
-    --muted: #5B6472;
-    --line: #D9DEE6;
-    --accent: #2740E6;
-    --accent-ink: #FFFFFF;
-    --accent-soft: #E8ECFF;
-    --font: "Schibsted Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  }
-  :root[data-theme="dark"] {
-    --bg: #0C1118;
-    --surface: #131A24;
-    --text: #E6EAF0;
-    --muted: #9AA4B2;
-    --line: #263041;
-    --accent: #8EA2FF;
-    --accent-ink: #0C1118;
-    --accent-soft: #1A2440;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #0C1118;
-      --surface: #131A24;
-      --text: #E6EAF0;
-      --muted: #9AA4B2;
-      --line: #263041;
-      --accent: #8EA2FF;
-      --accent-ink: #0C1118;
-      --accent-soft: #1A2440;
-    }
+    --text: #1F2328;
+    --muted: #59636E;
+    --line: #D1D9E0;
+    --accent: #A7E3BB;
+    --accent-ink: #0B2A17;
+    --accent-text: #1A7F37;
+    --accent-soft: #E3F6E9;
   }
 
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font);
-    font-size: 17px;
-    line-height: 1.6;
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: var(--font); font-size: 16px; line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-  a { color: var(--accent); text-underline-offset: 3px; }
+  a { color: var(--accent-text); text-underline-offset: 3px; }
   a:hover { text-decoration-thickness: 2px; }
-  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-
-  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
-
-  /* Header */
-  .top {
-    position: sticky; top: 0; z-index: 10;
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--line);
-  }
-  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; }
-  .brand { font-weight: 800; color: var(--text); text-decoration: none; letter-spacing: -0.01em; }
-  .nav { display: flex; align-items: center; gap: 4px 18px; flex-wrap: wrap; justify-content: flex-end; }
-  .nav a { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 500; padding: 4px 0; }
-  .nav a:hover { color: var(--text); }
-  .theme-btn {
-    font: inherit; font-size: 14px; color: var(--text);
-    background: transparent; border: 1px solid var(--line); border-radius: 999px;
-    padding: 4px 12px; cursor: pointer;
-  }
-  .theme-btn:hover { border-color: var(--accent); }
-
-  /* Hero */
-  .hero { padding: 72px 0 40px; }
-  .hero h1 {
-    margin: 0;
-    font-size: clamp(2.6rem, 7vw, 5rem);
-    line-height: 1.02;
-    letter-spacing: -0.035em;
-    font-weight: 800;
-  }
-  .hero .role {
-    margin: 18px 0 0;
-    font-size: clamp(1.15rem, 2.4vw, 1.5rem);
-    line-height: 1.35;
-    font-weight: 500;
-    max-width: 30em;
-  }
-  .hero .lede { margin: 18px 0 0; color: var(--muted); max-width: 40em; }
-  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-  .btn {
-    display: inline-block; text-decoration: none; font-weight: 700; font-size: 16px;
-    padding: 10px 20px; border-radius: 8px; border: 2px solid var(--accent);
-  }
-  .btn.primary { background: var(--accent); color: var(--accent-ink); }
-  .btn.ghost { color: var(--accent); background: transparent; }
-  .btn:hover { filter: brightness(1.08); text-decoration: none; }
-
-  /* The one memorable element: 30 years as a single line */
-  .span-wrap { margin-top: 56px; }
-  .span-title { margin: 0 0 10px; font-size: 15px; color: var(--muted); }
-  .span { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; }
-  .span li {
-    flex: var(--w) 1 0;
-    min-width: 0;
-    padding: 12px 10px 14px;
-    background: var(--surface);
-    border-top: 4px solid var(--line);
-    transform-origin: left center;
-    animation: grow 0.9s cubic-bezier(.2,.7,.2,1) both;
-    animation-delay: calc(var(--i) * 110ms);
-  }
-  .span li:nth-child(1) { --i: 0; }
-  .span li:nth-child(2) { --i: 1; }
-  .span li:nth-child(3) { --i: 2; }
-  .span li:nth-child(4) { --i: 3; }
-  .span li:nth-child(5) { --i: 4; }
-  .span li:nth-child(6) { --i: 5; }
-  .span .yrs { display: block; font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--muted); }
-  .span .what { display: block; margin-top: 2px; font-size: 14px; line-height: 1.3; font-weight: 500; overflow-wrap: anywhere; }
-  .span li.now { background: var(--accent); border-top-color: var(--accent); color: var(--accent-ink); }
-  .span li.now .yrs { color: inherit; opacity: 0.85; }
-  .span li.core { border-top-color: var(--text); }
-  @keyframes grow { from { opacity: 0; transform: scaleX(0.2); } to { opacity: 1; transform: scaleX(1); } }
-
-  /* Sections */
-  section { padding: 56px 0 8px; }
-  h2 { margin: 0 0 24px; font-size: clamp(1.6rem, 3.4vw, 2.1rem); letter-spacing: -0.02em; line-height: 1.15; }
-  h3 { margin: 0; font-size: 1.15rem; line-height: 1.3; }
+  :focus-visible { outline: 3px solid var(--accent-text); outline-offset: 3px; border-radius: 4px; }
   p { margin: 0 0 14px; }
-  .prose { max-width: 40em; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 6px; }
 
-  .row {
-    display: grid; grid-template-columns: 220px 1fr; gap: 8px 32px;
-    padding: 20px 0; border-top: 1px solid var(--line);
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+  /* Top bar and tabs */
+  .top { position: sticky; top: 0; z-index: 10; background: var(--surface); border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; }
+  .brand { font-weight: 700; color: var(--text); text-decoration: none; }
+  .tabs { display: flex; gap: 2px 6px; flex-wrap: wrap; align-items: center; }
+  .tabs a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; padding: 6px 10px; border-radius: 6px; }
+  .tabs a:hover { background: var(--accent-soft); color: var(--text); }
+  .theme-btn {
+    font: inherit; font-size: 13px; color: var(--text); background: transparent;
+    border: 1px solid var(--line); border-radius: 6px; padding: 4px 10px; cursor: pointer;
   }
-  .row:last-child { border-bottom: 1px solid var(--line); }
-  .row .k { font-weight: 700; }
-  .row .k small { display: block; margin-top: 2px; font-weight: 500; color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
-  .row .v > :last-child { margin-bottom: 0; }
-  .row ul { margin: 8px 0 0; padding-left: 1.1em; }
-  .row li { margin-bottom: 6px; }
-  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
-  .tags li { margin: 0; padding: 2px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 15px; }
-  .tags li.ai { border-color: var(--accent); background: var(--accent-soft); }
+  .theme-btn:hover { border-color: var(--accent-text); }
+
+  /* Two columns: profile card and README-style content */
+  .layout { display: grid; grid-template-columns: 296px minmax(0, 1fr); gap: 40px; padding-top: 32px; padding-bottom: 24px; align-items: start; }
+  aside { position: sticky; top: 80px; }
+  .avatar {
+    width: 100%; max-width: 260px; aspect-ratio: 1; border-radius: 50%;
+    border: 1px solid var(--line); background: var(--accent-soft); color: var(--accent-text);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 72px; font-weight: 700; letter-spacing: -0.02em;
+  }
+  aside h2.name { margin: 16px 0 0; font-size: 26px; line-height: 1.25; border: 0; padding: 0; }
+  aside .handle { color: var(--muted); font-size: 18px; margin: 0 0 12px; }
+  aside .bio { margin-bottom: 14px; }
+  .btn {
+    display: block; text-align: center; text-decoration: none; font-weight: 600; font-size: 15px;
+    padding: 7px 16px; border-radius: 6px; border: 1px solid var(--accent-text);
+  }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .btn.ghost { color: var(--accent-text); background: transparent; }
+  .btn:hover { filter: brightness(1.08); }
+  .btn-row { display: grid; gap: 8px; margin-bottom: 16px; }
+  .facts { list-style: none; padding: 0; margin: 0 0 16px; font-size: 15px; }
+  .facts li { display: flex; gap: 8px; margin-bottom: 6px; }
+  aside h3 { margin: 18px 0 8px; font-size: 16px; }
+  .highlights { list-style: none; padding: 0; margin: 0; font-size: 15px; }
+  .highlights li { margin-bottom: 6px; }
+
+  main h1 { margin: 0 0 8px; font-size: clamp(1.9rem, 4.5vw, 2.6rem); line-height: 1.15; }
+  .tagline { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+  main h2 {
+    margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
+    font-size: 1.55rem; line-height: 1.25;
+  }
+  main h3 { margin: 22px 0 8px; font-size: 1.15rem; line-height: 1.3; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
+  .prose { max-width: 46em; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 6px; padding: 0; list-style: none; }
+  .tags li { margin: 0; padding: 2px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 14px; }
+  .tags li.ai { border-color: var(--accent-text); background: var(--accent-soft); }
   .note { color: var(--muted); font-size: 15px; }
 
-  details { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 16px; }
-  summary { cursor: pointer; font-weight: 700; }
-  details .row:first-of-type { margin-top: 12px; }
+  /* Career table */
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; }
+  table { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 15px; }
+  caption { text-align: left; font-weight: 700; padding: 0 0 10px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+  thead th { background: var(--surface); font-size: 14px; color: var(--muted); }
+  tbody tr:last-child td { border-bottom: 0; }
+  tr.group th { background: var(--accent-soft); color: var(--text); font-size: 15px; border-bottom: 1px solid var(--line); }
+  td.when { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--muted); }
+  td.org { font-weight: 600; }
 
-  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: 15px; }
+  details { margin-top: 14px; border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px; background: var(--surface); }
+  summary { cursor: pointer; font-weight: 600; }
+  details[open] summary { margin-bottom: 10px; }
+
+  blockquote { margin: 0 0 14px; padding: 4px 16px; border-left: 4px solid var(--accent-text); color: var(--muted); }
+
+  footer { margin-top: 24px; border-top: 1px solid var(--line); padding: 24px 0 48px; color: var(--muted); font-size: 14px; }
   footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
 
-  /* Small screens */
-  @media (max-width: 760px) {
-    body { font-size: 16px; }
-    .nav a.hide-sm { display: none; }
-    .hero { padding-top: 48px; }
-    .span { flex-direction: column; }
-    .span li { flex: none; display: flex; gap: 14px; align-items: baseline; border-top-width: 0; border-left: 4px solid var(--line); }
-    .span li.core { border-left-color: var(--text); }
-    .span li.now { border-left-color: var(--accent); }
-    .span .yrs { min-width: 76px; }
-    .span .what { margin: 0; }
-    .row { grid-template-columns: 1fr; gap: 6px; }
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+    aside { position: static; }
+    .avatar { max-width: 120px; font-size: 44px; }
+    .tabs a.hide-sm { display: none; }
   }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .span li { animation: none; }
-  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
@@ -200,239 +150,227 @@ HOW TO EDIT THIS PAGE
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top">Bijit Kumar Paul</a>
-    <nav class="nav" aria-label="Sections">
-      <a href="#about" class="hide-sm">About</a>
-      <a href="#skills" class="hide-sm">Skills</a>
-      <a href="#ai-projects">AI projects</a>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#about">Overview</a>
+      <a href="#stack" class="hide-sm">Tech stack</a>
+      <a href="#projects">Projects</a>
       <a href="#career">Career</a>
       <a href="#education" class="hide-sm">Education</a>
-      <a href="#contact">Contact</a>
-      <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch between light and dark theme">Theme</button>
+      <a href="#connect">Contact</a>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch between dark and light theme">Theme</button>
     </nav>
   </div>
 </header>
 
-<main id="top">
-  <div class="wrap">
+<div class="wrap layout" id="top">
 
-    <div class="hero">
-      <!-- HIDDEN UNTIL READY: PROFILE PHOTO
-      Add your photo to an "assets" folder, then place this tag above the h1:
-      <img src="assets/photo.jpg" alt="Bijit Kumar Paul" width="120" height="120" style="border-radius:50%;object-fit:cover;margin-bottom:20px;">
+  <aside aria-label="Profile">
+    <div class="avatar" aria-hidden="true">BP</div>
+    <!-- HIDDEN UNTIL READY: PROFILE PHOTO
+    Upload your photo to an "assets" folder, delete the avatar div above, and use:
+    <img src="assets/photo.jpg" alt="Bijit Kumar Paul" style="width:100%;max-width:260px;aspect-ratio:1;border-radius:50%;object-fit:cover;border:1px solid var(--line)">
+    -->
+    <h2 class="name">Bijit Kumar Paul</h2>
+    <p class="handle">YOUR_USERNAME</p>
+    <p class="bio">Technical Lead with 15+ years in backend, IoT and telecom. Now building agentic AI applications.</p>
+    <div class="btn-row">
+      <a class="btn primary" href="YOUR_LINKEDIN_URL">Connect on LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/YOUR_USERNAME">GitHub profile</a>
+      <!-- HIDDEN UNTIL READY: RESUME DOWNLOAD
+      Upload a resume without your phone number to the "assets" folder, then enable:
+      <a class="btn ghost" href="assets/Bijit_Kumar_Paul_Resume.pdf" download>Download resume</a>
       -->
-      <h1>Bijit Kumar Paul</h1>
-      <p class="role">Technical lead with 15+ years of backend, IoT and telecom experience, now building agentic AI applications.</p>
-      <p class="lede">I write C, C++ and Python on Linux for systems that have to stay up. I am applying that discipline to AI agents built with LangChain, LangGraph and n8n.</p>
-      <div class="actions">
-        <a class="btn primary" href="YOUR_LINKEDIN_URL">Connect on LinkedIn</a>
-        <a class="btn ghost" href="https://github.com/YOUR_USERNAME">See my GitHub</a>
-        <!-- HIDDEN UNTIL READY: RESUME DOWNLOAD
-        Upload a resume without your phone number to the "assets" folder, then enable:
-        <a class="btn ghost" href="assets/Bijit_Kumar_Paul_Resume.pdf" download>Download resume</a>
-        -->
-      </div>
+    </div>
+    <ul class="facts">
+      <li><span aria-hidden="true">📍</span><span>Bangalore, India</span></li>
+      <li><span aria-hidden="true">🎓</span><span>M.Tech, BITS Pilani</span></li>
+      <li><span aria-hidden="true">💼</span><span>Open to AI opportunities</span></li>
+      <li><span aria-hidden="true">🔗</span><a href="YOUR_LINKEDIN_URL">LinkedIn</a></li>
+    </ul>
+    <h3>Highlights</h3>
+    <ul class="highlights">
+      <li><span aria-hidden="true">⭐</span> 15+ years in backend, IoT and telecom</li>
+      <li><span aria-hidden="true">🏆</span> Attended Open Source India 2026</li>
+      <li><span aria-hidden="true">🤖</span> Building with LangChain, LangGraph and n8n</li>
+    </ul>
+  </aside>
 
-      <div class="span-wrap">
-        <p class="span-title">Academic career from 1999, technical career from 2008</p>
-        <ol class="span" aria-label="Career overview">
-          <li style="--w:9"><span class="yrs">1999–2008</span><span class="what">Academic: teaching MCA</span></li>
-          <li style="--w:3"><span class="yrs">2008–11</span><span class="what">Telecom and test systems</span></li>
-          <li class="core" style="--w:11"><span class="yrs">2011–22</span><span class="what">Unified communication and vehicle IoT</span></li>
-          <li class="core" style="--w:4"><span class="yrs">2022–26</span><span class="what">AWS IoT, embedded, RFID</span></li>
-          <li class="now" style="--w:3"><span class="yrs">Now</span><span class="what">Agentic AI</span></li>
-        </ol>
-      </div>
+  <main>
+    <h1>Hi 👋, I'm Bijit Kumar Paul</h1>
+    <p class="tagline">🚀 Technical Lead | C, C++, Python and Linux | Moving into agentic AI</p>
+
+    <h2 id="about">🙋 About Me</h2>
+    <div class="prose">
+      <ul>
+        <li>🛠️ I build backend and embedded applications for IoT, telecommunications, unified communication and banking.</li>
+        <li>⏱️ Much of my work has run around the clock for large user bases, where speed, stability and clear failure handling matter most.</li>
+        <li>🤖 I am now moving into the AI domain, building proof-of-concept agentic AI applications and learning new tools along the way.</li>
+        <li>🎯 I am looking for opportunities to work on AI-driven systems.</li>
+      </ul>
     </div>
 
-    <section id="about">
-      <h2>About</h2>
-      <div class="prose">
-        <p>I build backend and embedded applications for IoT, telecommunications, unified communication and banking. Much of my work has run around the clock for large user bases, where speed, stability and clear failure handling matter more than features.</p>
-        <p>I am now moving into the AI domain. I learn by building, so I am developing proof-of-concept agentic AI applications and keep adding new tools to what I use. I am looking for opportunities to work on AI-driven systems.</p>
-      </div>
-    </section>
+    <h2 id="stack">🧰 Tech Stack</h2>
+    <h3>🤖 AI and agents</h3>
+    <ul class="tags">
+      <li class="ai">LangChain</li><li class="ai">LangGraph</li><li class="ai">n8n</li><li class="ai">AI agents</li><li class="ai">SerpApi</li><li class="ai">Oxylabs</li>
+    </ul>
+    <h3>💻 Languages</h3>
+    <ul class="tags"><li>C</li><li>C++</li><li>Python</li><li>Java</li><li>Shell scripting</li></ul>
+    <h3>🔌 Systems and IoT</h3>
+    <ul class="tags"><li>Linux/Unix</li><li>Multi-threading</li><li>IPC</li><li>Sockets</li><li>MQTT</li><li>LLRP</li><li>AWS IoT</li><li>Yocto</li><li>STM32</li><li>BeagleBone Black</li><li>Qt5</li></ul>
+    <h3>🗄️ Data and design</h3>
+    <ul class="tags"><li>Oracle</li><li>Sybase</li><li>UML</li><li>Design patterns</li><li>Data structures and algorithms</li></ul>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div>
-        <div class="row">
-          <div class="k">AI and agents</div>
-          <div class="v">
-            <ul class="tags">
-              <li class="ai">LangChain</li><li class="ai">LangGraph</li><li class="ai">n8n</li><li class="ai">AI agents</li><li class="ai">SerpApi</li><li class="ai">Oxylabs</li>
-            </ul>
-            <p class="note" style="margin-top:10px">Currently exploring: MCP, multi-agent systems and how LLMs are trained and scaled.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="k">Languages</div>
-          <div class="v"><ul class="tags"><li>C</li><li>C++</li><li>Python</li><li>Java</li><li>Shell scripting</li></ul></div>
-        </div>
-        <div class="row">
-          <div class="k">Systems and IoT</div>
-          <div class="v"><ul class="tags"><li>Linux/Unix</li><li>Multi-threading</li><li>IPC</li><li>Sockets</li><li>MQTT</li><li>LLRP</li><li>AWS IoT</li><li>Yocto</li><li>STM32</li><li>BeagleBone Black</li><li>Qt5</li></ul></div>
-        </div>
-        <div class="row">
-          <div class="k">Data and design</div>
-          <div class="v"><ul class="tags"><li>Oracle</li><li>Sybase</li><li>UML</li><li>Design patterns</li><li>Data structures and algorithms</li></ul></div>
-        </div>
-      </div>
-    </section>
+    <h2 id="projects">🤖 Featured Projects</h2>
+    <h3>📈 Market Launch Evaluator</h3>
+    <p>An agentic AI application that helps entrepreneurs decide whether a product should be launched in a target market. It combines demand intelligence from SerpApi with supply intelligence from Oxylabs.</p>
+    <!-- HIDDEN UNTIL READY: PROJECT DETAILS
+    <p><a href="https://github.com/YOUR_USERNAME/REPO_NAME">View the code</a></p>
+    <p class="note">Built with: Python, LangGraph, ...</p>
+    <img src="assets/market-launch-demo.gif" alt="Market Launch Evaluator demo" style="max-width:100%;border-radius:8px;border:1px solid var(--line)">
+    -->
+    <hr>
+    <h3>🏥 Healthcare Incident Monitoring and Response</h3>
+    <p>An agentic AI system for real-time monitoring of healthcare incidents and supporting the response to them.</p>
+    <!-- HIDDEN UNTIL READY: PROJECT DETAILS
+    <p><a href="https://github.com/YOUR_USERNAME/REPO_NAME">View the code</a></p>
+    <p class="note">Built with: Python, LangGraph, ...</p>
+    <video controls preload="metadata" style="max-width:100%;border-radius:8px" src="assets/healthcare-demo.mp4"></video>
+    -->
+    <hr>
+    <h3>💬 AI chat bot (M.Tech dissertation, BITS Pilani)</h3>
+    <p>A Python AI/ML engine that processes chat queries, retrieves responses from historical data and serves multiple users at the same time in a 3-tier architecture.</p>
 
-    <section id="ai-projects">
-      <h2>AI projects</h2>
-      <div>
-        <div class="row">
-          <div class="k">Market Launch Evaluator</div>
-          <div class="v">
-            <p>An agentic AI application that helps entrepreneurs decide whether a product should be launched in a target market. It combines demand intelligence from SerpApi with supply intelligence from Oxylabs.</p>
-            <!-- HIDDEN UNTIL READY: PROJECT DETAILS
-            <p><a href="https://github.com/YOUR_USERNAME/REPO_NAME">View the code</a></p>
-            <p class="note">Built with: Python, LangGraph, ...</p>
-            <img src="assets/market-launch-demo.gif" alt="Market Launch Evaluator demo" style="max-width:100%;border-radius:8px;border:1px solid var(--line)">
-            -->
-          </div>
-        </div>
-        <div class="row">
-          <div class="k">Healthcare Incident Monitoring and Response</div>
-          <div class="v">
-            <p>An agentic AI system for real-time monitoring of healthcare incidents and supporting the response to them.</p>
-            <!-- HIDDEN UNTIL READY: PROJECT DETAILS
-            <p><a href="https://github.com/YOUR_USERNAME/REPO_NAME">View the code</a></p>
-            <p class="note">Built with: Python, LangGraph, ...</p>
-            <video controls preload="metadata" style="max-width:100%;border-radius:8px" src="assets/healthcare-demo.mp4"></video>
-            -->
-          </div>
-        </div>
-        <div class="row">
-          <div class="k">AI chat bot<small>M.Tech dissertation, BITS Pilani</small></div>
-          <div class="v">
-            <p>A Python AI/ML engine that processes chat queries, retrieves responses from historical data and serves multiple users at the same time in a 3-tier architecture.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <h2 id="career">💼 Career</h2>
+    <p><b>Academic career from 1999, technical career from 2008</b></p>
+    <div class="table-wrap">
+      <table aria-label="Academic career from 1999, technical career from 2008">
+        <thead>
+          <tr><th scope="col">Period</th><th scope="col">Role</th><th scope="col">Organisation</th><th scope="col">What I worked on</th></tr>
+        </thead>
+        <tbody>
+          <tr class="group"><th colspan="4" scope="colgroup">🛠️ Technical experience (from 2008)</th></tr>
+          <tr>
+            <td class="when">Apr 2022 – Feb 2026</td><td>Senior Technical Lead</td><td class="org">Quest Global, Bangalore</td>
+            <td>AWS IoT client in C++ on Linux; STM32 and BeagleBone Black tools; Impinj industrial RFID application over MQTT and LLRP.</td>
+          </tr>
+          <tr>
+            <td class="when">Nov 2011 – Mar 2022</td><td>Technical Lead</td><td class="org">Harman India, Bangalore</td>
+            <td>HDC: real-time vehicle data from OBD firmware to the cloud. MindAlign: unified communication product for global banking clients with 50K+ users.</td>
+          </tr>
+          <tr>
+            <td class="when">Aug 2009 – Oct 2011</td><td>Senior Software Engineer</td><td class="org">IBM, Bangalore</td>
+            <td>NC3 network configuration repository and Basic8 toll-free number provisioning, both for AT&amp;T.</td>
+          </tr>
+          <tr>
+            <td class="when">Aug 2008 – Jul 2009</td><td>Consultant</td><td class="org">TMI Systems, Bangalore</td>
+            <td>VC++ application for real-time plotting of digitized analog instrument data.</td>
+          </tr>
+          <tr class="group"><th colspan="4" scope="colgroup">🎓 Academic experience (from 1999)</th></tr>
+          <tr>
+            <td class="when">May 2005 – Jul 2009</td><td>Senior Faculty Member, MCA</td><td class="org">ICFAI School of IT, Bangalore</td>
+            <td>Teaching in the MCA programme.</td>
+          </tr>
+          <tr>
+            <td class="when">Dec 1999 – Oct 2004</td><td>Staff Instructor, MCA</td><td class="org">St. Xavier's College, Kolkata</td>
+            <td>Teaching in the MCA programme.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <section id="career">
-      <h2>Career</h2>
-      <div>
-        <div class="row">
-          <div class="k">Quest Global, Bangalore<small>Senior Technical Lead<br>Apr 2022 to Feb 2026</small></div>
-          <div class="v">
-            <ul>
-              <li>Designed and built a C++ AWS IoT application on Linux that gathers hardware component data and publishes it to AWS IoT, using IPC, sockets and multi-threading.</li>
-              <li>Built Python-Qt5 testing and configuration tools for STM32 boards, and set up BeagleBone Black with a Yocto-built OS.</li>
-              <li>Worked on an industrial RFID application in C++ on Linux that sends scanned data to servers over MQTT and LLRP for inventory tracking and analytics.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="k">Harman India, Bangalore<small>Technical Lead<br>Nov 2011 to Mar 2022</small></div>
-          <div class="v">
-            <ul>
-              <li><b>HDC:</b> a C++ embedded application on Linux, running on OBD device firmware, that collects real-time vehicle data and sends analytics to the cloud over MQTT.</li>
-              <li><b>MindAlign:</b> contributed to a unified communication product in C and C++ on Unix and Windows, running 24x7 for global banking and financial clients with 50K+ users and distributed messaging and login nodes for load balancing.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="k">IBM, Bangalore<small>Senior Software Engineer<br>Aug 2009 to Oct 2011</small></div>
-          <div class="v">
-            <ul>
-              <li><b>NC3:</b> a C++ application on Unix for AT&amp;T that serves as a central repository of client network configuration data for ordering, design, management and reporting.</li>
-              <li><b>Basic8:</b> a C application on Unix for AT&amp;T that automates provisioning, configuration and life-cycle management of toll-free numbers.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="k">TMI Systems, Bangalore<small>Consultant<br>Aug 2008 to Jul 2009</small></div>
-          <div class="v"><p>Built a VC++ application for real-time plotting of digitized analog instrument data.</p></div>
-        </div>
-      </div>
+    <details>
+      <summary>More detail on my technical roles</summary>
+      <h3>Quest Global</h3>
+      <ul>
+        <li>Designed and built a C++ AWS IoT application on Linux that gathers hardware component data and publishes it to AWS IoT, using IPC, sockets and multi-threading.</li>
+        <li>Built Python-Qt5 testing and configuration tools for STM32 boards, and set up BeagleBone Black with a Yocto-built OS.</li>
+        <li>Worked on an industrial RFID application in C++ on Linux that sends scanned data to servers over MQTT and LLRP for inventory tracking and analytics.</li>
+      </ul>
+      <h3>Harman India</h3>
+      <ul>
+        <li><b>HDC:</b> a C++ embedded application on Linux, running on OBD device firmware, that collects real-time vehicle data and sends analytics to the cloud over MQTT.</li>
+        <li><b>MindAlign:</b> contributed to a unified communication product in C and C++ on Unix and Windows, running 24x7 for global banking and financial clients with 50K+ users and distributed messaging and login nodes for load balancing.</li>
+      </ul>
+      <h3>IBM</h3>
+      <ul>
+        <li><b>NC3:</b> a C++ application on Unix for AT&amp;T that serves as a central repository of client network configuration data for ordering, design, management and reporting.</li>
+        <li><b>Basic8:</b> a C application on Unix for AT&amp;T that automates provisioning, configuration and life-cycle management of toll-free numbers.</li>
+      </ul>
+    </details>
 
-      <details>
-        <summary>Earlier career: teaching and first roles</summary>
-        <div class="row">
-          <div class="k">ICFAI School of IT, Bangalore<small>Senior Faculty Member, MCA<br>May 2005 to Jul 2009</small></div>
-          <div class="v"></div>
-        </div>
-        <div class="row">
-          <div class="k">St. Xavier's College, Kolkata<small>Staff Instructor, MCA<br>Dec 1999 to Oct 2004</small></div>
-          <div class="v"></div>
-        </div>
-        <div class="row">
-          <div class="k">Aditya Birla Group (Jayashree Textiles), Kolkata<small>Software Engineer<br>Jun 1996 to Nov 1998</small></div>
-          <div class="v">
-            <ul>
-              <li><b>Raw Material System:</b> a Unix-based C application using Sybase DB-Library that tracked raw material inventory for textile units, from procurement through receipt to issuance.</li>
-              <li><b>Excise System:</b> an end-to-end Central Excise system in C on Unix that automated duty calculation, payment and accumulation, and handled production inventory and exports.</li>
-            </ul>
-          </div>
-        </div>
-      </details>
-    </section>
+    <details>
+      <summary>Earlier career: first role, 1996 to 1998</summary>
+      <h3>Software Engineer, Aditya Birla Group (Jayashree Textiles), Kolkata</h3>
+      <ul>
+        <li><b>Raw Material System:</b> a Unix-based C application using Sybase DB-Library that tracked raw material inventory for textile units, from procurement through receipt to issuance.</li>
+        <li><b>Excise System:</b> an end-to-end Central Excise system in C on Unix that automated duty calculation, payment and accumulation, and handled production inventory and exports.</li>
+      </ul>
+    </details>
 
-    <section id="education">
-      <h2>Education and learning</h2>
-      <div>
-        <div class="row">
-          <div class="k">Master of Technology</div>
-          <div class="v"><p>BITS Pilani. Dissertation: an AI-based chat bot for answering queries from historical data.</p></div>
-        </div>
-        <div class="row">
-          <div class="k">Master of Computer Applications</div>
-          <div class="v"><p>Project: a Tourist Information System in VC++ for route optimization, using Dijkstra's algorithm and the distance vector routing protocol.</p></div>
-        </div>
-        <div class="row">
-          <div class="k">Open Source India 2026<small>Oct 2026</small></div>
-          <div class="v"><p>Two-day conference. Sessions on reliable agentic AI with open source, multi-agent harnesses, an AI Kubernetes assistant with MCP, scaling LLM training, modular LLMs, multimodal AI, AI-native fraud defence and moving from DevOps to AI.</p></div>
-        </div>
-      </div>
-    </section>
+    <h2 id="education">🎓 Education and Learning</h2>
+    <ul>
+      <li><b>Master of Technology, BITS Pilani.</b> Dissertation: an AI-based chat bot for answering queries from historical data.</li>
+      <li><b>Master of Computer Applications.</b> Project: a Tourist Information System in VC++ for route optimization, using Dijkstra's algorithm and the distance vector routing protocol.</li>
+      <li><b>Open Source India 2026 (October 2026).</b> A two-day conference with sessions on reliable agentic AI with open source, multi-agent harnesses, an AI Kubernetes assistant with MCP, scaling LLM training, modular LLMs, multimodal AI, AI-native fraud defence and moving from DevOps to AI.</li>
+    </ul>
 
-    <!-- HIDDEN UNTIL READY: PUBLICATIONS
-    <section id="publications">
-      <h2>Publications</h2>
-      <div class="row"><div class="k">Paper title<small>Journal or conference, year</small></div><div class="v"><p>One-line summary. <a href="URL">Read the paper</a></p></div></div>
-    </section>
+    <h2 id="now">🔭 What I'm Learning Now</h2>
+    <ul>
+      <li>🧩 Agentic AI and multi-agent systems</li>
+      <li>🔌 Model Context Protocol (MCP)</li>
+      <li>📈 How LLMs are trained and scaled</li>
+    </ul>
+
+    <!-- HIDDEN UNTIL READY: RESEARCH WORK AND PUBLICATIONS
+    <h2 id="research">📚 Research Work</h2>
+    <h3>Paper title</h3>
+    <p>Journal or conference, year. One-line summary. <a href="URL">Read the paper</a></p>
     -->
 
     <!-- HIDDEN UNTIL READY: CERTIFICATIONS
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <div class="row"><div class="k">Certification name<small>Issuer, year</small></div><div class="v"><p><a href="URL">Verify credential</a></p></div></div>
-    </section>
+    <h2 id="certifications">📜 Certifications</h2>
+    <ul><li>Certification name, issuer, year. <a href="URL">Verify credential</a></li></ul>
     -->
 
     <!-- HIDDEN UNTIL READY: AWARDS
-    <section id="awards">
-      <h2>Awards</h2>
-      <div class="row"><div class="k">Award name<small>Organisation, year</small></div><div class="v"><p>Why you received it.</p></div></div>
-    </section>
+    <h2 id="awards">🥇 Awards</h2>
+    <ul><li>Award name, organisation, year. Why you received it.</li></ul>
     -->
 
     <!-- HIDDEN UNTIL READY: TALKS AND ARTICLES
-    <section id="talks">
-      <h2>Talks and articles</h2>
-      <div class="row"><div class="k">Title<small>Event or site, year</small></div><div class="v"><p><a href="URL">Watch or read</a></p></div></div>
-    </section>
+    <h2 id="talks">🎤 Talks and Articles</h2>
+    <ul><li>Title, event or site, year. <a href="URL">Watch or read</a></li></ul>
     -->
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="prose">
-        <p>I am open to opportunities in the AI domain. The best way to reach me is on LinkedIn.</p>
-        <div class="actions">
-          <a class="btn primary" href="YOUR_LINKEDIN_URL">Message me on LinkedIn</a>
-          <!-- HIDDEN UNTIL READY: EMAIL
-          <a class="btn ghost" href="mailto:your-email@example.com">Send an email</a>
-          -->
-        </div>
-      </div>
-    </section>
+    <!-- HIDDEN UNTIL READY: GITHUB STATS (works best once you have more public repos)
+    <h2 id="stats">📊 GitHub Stats</h2>
+    <img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&hide_border=true&theme=dark" alt="GitHub stats">
+    -->
 
-  </div>
-</main>
+    <!-- HIDDEN UNTIL READY: PHILOSOPHY
+    <h2 id="philosophy">💭 Philosophy</h2>
+    <blockquote>Your own line about how you build software.</blockquote>
+    -->
+
+    <h2 id="collaborate">🤝 Let's Collaborate</h2>
+    <ul>
+      <li>🤖 Agentic AI projects and proofs of concept</li>
+      <li>🔌 IoT, embedded and telecom backend work</li>
+      <li>🧪 Reviewing and evaluating AI systems</li>
+    </ul>
+
+    <h2 id="connect">📫 Connect With Me</h2>
+    <p>The best way to reach me is on LinkedIn.</p>
+    <ul>
+      <li>🔗 <a href="YOUR_LINKEDIN_URL">LinkedIn</a></li>
+      <li>🐙 <a href="https://github.com/YOUR_USERNAME">GitHub</a></li>
+      <!-- HIDDEN UNTIL READY: EMAIL
+      <li>✉️ <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+      -->
+    </ul>
+  </main>
+</div>
 
 <footer>
   <div class="wrap">
@@ -450,10 +388,7 @@ HOW TO EDIT THIS PAGE
       if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
     } catch (e) {}
     btn.addEventListener("click", function () {
-      var current = root.getAttribute("data-theme");
-      if (!current) {
-        current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-      }
+      var current = root.getAttribute("data-theme") || "dark";
       var next = current === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", next);
       try { localStorage.setItem("theme", next); } catch (e) {}
