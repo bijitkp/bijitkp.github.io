@@ -3,35 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark light">
+<meta name="color-scheme" content="light dark">
 <title>Bijit Kumar Paul | Technical Lead, moving into Agentic AI</title>
 <meta name="description" content="Technical Lead with 15+ years in C, C++, Python and Linux across IoT, telecommunications and unified communication. Now building agentic AI applications.">
 <meta property="og:title" content="Bijit Kumar Paul | Technical Lead">
 <meta property="og:description" content="15+ years of backend, IoT and telecom engineering. Now building agentic AI applications.">
-<meta name="theme-color" content="#0D1117">
+<meta name="theme-color" content="#FFFFFF">
 <style>
   :root {
-    --bg: #0D1117;
-    --surface: #161B22;
-    --text: #E6EDF3;
-    --muted: #8B949E;
-    --line: #30363D;
-    --accent: #8FDCA8;
-    --accent-ink: #0B2A17;
-    --accent-text: #8FDCA8;
-    --accent-soft: #12261A;
+    --bg: #FFFFFF;
+    --surface: #F6F8F7;
+    --text: #1F2328;
+    --muted: #5B665F;
+    --line: #DCE3DE;
+    --accent: #A9C9B1;
+    --accent-ink: #14301E;
+    --accent-text: #2F6B45;
+    --accent-soft: #EAF2EC;
     --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
   }
-  :root[data-theme="light"] {
-    --bg: #F6F8FA;
-    --surface: #FFFFFF;
-    --text: #1F2328;
-    --muted: #59636E;
-    --line: #D1D9E0;
-    --accent: #A7E3BB;
-    --accent-ink: #0B2A17;
-    --accent-text: #1A7F37;
-    --accent-soft: #E3F6E9;
+  :root[data-theme="dark"] {
+    --bg: #0F1412;
+    --surface: #161C19;
+    --text: #E6ECE8;
+    --muted: #94A199;
+    --line: #2D3731;
+    --accent: #8FB59B;
+    --accent-ink: #0F1B14;
+    --accent-text: #9CC7AA;
+    --accent-soft: #17251D;
   }
 
   * { box-sizing: border-box; }
@@ -72,6 +72,7 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 72px; font-weight: 700; letter-spacing: -0.02em;
   }
+  .avatar-img { display: block; width: 100%; max-width: 260px; height: auto; border-radius: 50%; }
   aside h2.name { margin: 16px 0 0; font-size: 26px; line-height: 1.25; border: 0; padding: 0; }
   aside .handle { color: var(--muted); font-size: 18px; margin: 0 0 12px; }
   aside .bio { margin-bottom: 14px; }
@@ -92,7 +93,7 @@
   main h1 { margin: 0 0 8px; font-size: clamp(1.9rem, 4.5vw, 2.6rem); line-height: 1.15; }
   .tagline { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
   main h2 {
-    margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
+    margin: 40px 0 16px; padding-top: 28px; border-top: 3px solid var(--accent);
     font-size: 1.55rem; line-height: 1.25;
   }
   main h3 { margin: 22px 0 8px; font-size: 1.15rem; line-height: 1.3; }
@@ -121,13 +122,13 @@
 
   blockquote { margin: 0 0 14px; padding: 4px 16px; border-left: 4px solid var(--accent-text); color: var(--muted); }
 
-  footer { margin-top: 24px; border-top: 1px solid var(--line); padding: 24px 0 48px; color: var(--muted); font-size: 14px; }
+  footer { margin-top: 24px; border-top: 3px solid var(--accent); padding: 24px 0 48px; color: var(--muted); font-size: 14px; }
   footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
 
   @media (max-width: 860px) {
     .layout { grid-template-columns: minmax(0, 1fr); gap: 8px; }
     aside { position: static; }
-    .avatar { max-width: 120px; font-size: 44px; }
+    .avatar-img { max-width: 140px; }
     .tabs a.hide-sm { display: none; }
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -165,11 +166,7 @@ HOW TO EDIT THIS PAGE
 <div class="wrap layout" id="top">
 
   <aside aria-label="Profile">
-    <div class="avatar" aria-hidden="true">BP</div>
-    <!-- HIDDEN UNTIL READY: PROFILE PHOTO
-    Upload your photo to an "assets" folder, delete the avatar div above, and use:
-    <img src="assets/photo.jpg" alt="Bijit Kumar Paul" style="width:100%;max-width:260px;aspect-ratio:1;border-radius:50%;object-fit:cover;border:1px solid var(--line)">
-    -->
+    <img class="avatar-img" src="photo.png" alt="Bijit Kumar Paul" width="260" height="260">
     <h2 class="name">Bijit Kumar Paul</h2>
     <p class="handle">YOUR_USERNAME</p>
     <p class="bio">Technical Lead with 15+ years in backend, IoT and telecom. Now building agentic AI applications.</p>
@@ -388,8 +385,8 @@ HOW TO EDIT THIS PAGE
       if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
     } catch (e) {}
     btn.addEventListener("click", function () {
-      var current = root.getAttribute("data-theme") || "dark";
-      var next = current === "dark" ? "light" : "dark";
+      var current = root.getAttribute("data-theme") || "light";
+      var next = current === "light" ? "dark" : "light";
       root.setAttribute("data-theme", next);
       try { localStorage.setItem("theme", next); } catch (e) {}
     });
